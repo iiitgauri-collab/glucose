@@ -339,3 +339,264 @@ Predict blood glucose levels instantly using wearable data.
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GlucoSense AI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:#eef4f5;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
+}
+
+.phone{
+
+width:390px;
+height:844px;
+background:white;
+border-radius:25px;
+overflow:auto;
+box-shadow:0 10px 35px rgba(0,0,0,.15);
+
+}
+
+.header{
+
+background:#00796b;
+padding:35px 25px;
+color:white;
+border-radius:0 0 30px 30px;
+
+}
+
+.header h2{
+
+font-size:28px;
+
+}
+
+.header p{
+
+margin-top:8px;
+opacity:.9;
+
+}
+
+.card{
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+color:#333;
+
+}
+
+.status{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+.circle{
+
+width:70px;
+height:70px;
+border-radius:50%;
+background:#d9f8ef;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+color:#00796b;
+
+}
+
+button{
+
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:12px;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+
+}
+
+.upload{
+
+background:#00796b;
+color:white;
+
+}
+
+.predict{
+
+background:#26a69a;
+color:white;
+
+}
+
+.menu{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin:20px;
+
+}
+
+.item{
+
+background:white;
+padding:25px;
+text-align:center;
+border-radius:18px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+cursor:pointer;
+transition:.3s;
+
+}
+
+.item:hover{
+
+transform:translateY(-5px);
+
+}
+
+.item i{
+
+font-size:30px;
+color:#00796b;
+margin-bottom:10px;
+
+}
+
+.item p{
+
+font-weight:600;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="phone">
+
+<div class="header">
+
+<h2>Hello 👋</h2>
+
+<p>Welcome to GlucoSense AI</p>
+
+</div>
+
+<div class="card">
+
+<h3>Today's Status</h3>
+
+<div class="status">
+
+<div>
+
+<h1 style="color:#00796b;">124</h1>
+
+<p>mg/dL</p>
+
+</div>
+
+<div class="circle">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<div style="padding:0 20px;">
+
+<button class="upload"
+onclick="location.href='upload.html'">
+
+<i class="fa-solid fa-upload"></i>
+
+Upload Sensor Data
+
+</button>
+
+<button class="predict"
+onclick="location.href='prediction.html'">
+
+<i class="fa-solid fa-brain"></i>
+
+Predict Glucose
+
+</button>
+
+</div>
+
+<div class="menu">
+
+<div class="item"
+onclick="location.href='history.html'">
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+<p>History</p>
+
+</div>
+
+<div class="item"
+onclick="location.href='profile.html'">
+
+<i class="fa-solid fa-user"></i>
+
+<p>Profile</p>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
