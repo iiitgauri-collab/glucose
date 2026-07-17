@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GlucoSense AI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#eef5f7;
+display:flex;
+justify-content:center;
+padding:20px;
+}
+
+.phone{
+
+width:390px;
+min-height:844px;
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.page{
+
+display:none;
+padding:25px;
+
+}
+
+.active{
+
+display:block;
+
+}
+
+.logo{
+
+width:90px;
+height:90px;
+background:#dff4f0;
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:45px;
+margin:20px auto;
+
+}
+
+h1{
+
+text-align:center;
+color:#00796B;
+
+}
+
+.subtitle{
+
+text-align:center;
+color:gray;
+margin-bottom:35px;
+
+}
+
+input{
+
+width:100%;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+
+}
+
+button{
+
+width:100%;
+padding:15px;
+border:none;
+background:#00796B;
+color:white;
+border-radius:10px;
+font-size:17px;
+cursor:pointer;
+margin-top:15px;
+
+}
+
+button:hover{
+
+background:#00695C;
+
+}
+
+.card{
+
+background:white;
+padding:18px;
+margin:15px 0;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+cursor:pointer;
+
+}
+
+.card:hover{
+
+background:#f2fffc;
+
+}
+
+.center{
+
+text-align:center;
+
+}
+
+.upload{
+
+border:2px dashed #00796B;
+padding:40px;
+text-align:center;
+border-radius:15px;
+margin:20px 0;
+
+}
+
+.history{
+
+background:#f5f5f5;
+padding:12px;
+margin:10px 0;
+border-radius:10px;
+
+}
+
+.profile{
+
+text-align:center;
+
+}
+
+.profile img{
+
+width:90px;
+height:90px;
+border-radius:50%;
+margin:20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="phone">
+
+<!-- LOGIN -->
+
+<div id="login" class="page active">
+
+<div class="logo">🩺</div>
+
+<h1>GlucoSense AI</h1>
+
+<p class="subtitle">Smart Glucose Monitoring</p>
+
+<input placeholder="Email">
+
+<input type="password" placeholder="Password">
+
+<button onclick="showPage('home')">Sign In</button>
+
+</div>
+
+<!-- HOME -->
+
+<div id="home" class="page">
+
+<h1>Dashboard</h1>
+
+<p class="subtitle">Welcome Back</p>
+
+<div class="card" onclick="showPage('upload')">
+
+📂 Upload Sensor Data
+
+</div>
+
+<div class="card" onclick="showPage('prediction')">
+
+🧠 Predict Glucose
+
+</div>
+
+<div class="card" onclick="showPage('history')">
+
+📜 Prediction History
+
+</div>
+
+<div class="card" onclick="showPage('profile')">
+
+👤 Profile
+
+</div>
+
+</div>
+
+<!-- Upload -->
+
+<div id="upload" class="page">
+
+<h1>Upload Data</h1>
+
+<div class="upload">
+
+<input type="file">
+
+<p>Upload CSV File</p>
+
+</div>
+
+<button onclick="alert('Data Uploaded Successfully')">
+
+Analyze Data
+
+</button>
+
+<br><br>
+
+<button onclick="showPage('home')">
+
+← Back
+
+</button>
+
+</div>
+
+<!-- Prediction -->
+
+<div id="prediction" class="page">
+
+<h1>Prediction</h1>
+
+<div class="card center">
+
+<h2>124 mg/dL</h2>
+
+<p>Predicted Glucose</p>
+
+<br>
+
+<b style="color:green;">Normal</b>
+
+</div>
+
+<button onclick="showPage('home')">
+
+Back
+
+</button>
+
+</div>
+
+<!-- History -->
+
+<div id="history" class="page">
+
+<h1>History</h1>
+
+<div class="history">
+
+17 July • 122 mg/dL • Normal
+
+</div>
+
+<div class="history">
+
+16 July • 136 mg/dL • High
+
+</div>
+
+<div class="history">
+
+15 July • 110 mg/dL • Normal
+
+</div>
+
+<button onclick="showPage('home')">
+
+Back
+
+</button>
+
+</div>
+
+<!-- Profile -->
+
+<div id="profile" class="page">
+
+<div class="profile">
+
+<img src="https://via.placeholder.com/100">
+
+<h2>Gauri</h2>
+
+<p>gauri@email.com</p>
+
+</div>
+
+<button onclick="showPage('home')">
+
+Home
+
+</button>
+
+<button onclick="showPage('login')">
+
+Logout
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function showPage(id){
+
+document.querySelectorAll('.page').forEach(function(page){
+
+page.classList.remove('active');
+
+});
+
+document.getElementById(id).classList.add('active');
+
+}
+
+</script>
+
+</body>
+</html>
